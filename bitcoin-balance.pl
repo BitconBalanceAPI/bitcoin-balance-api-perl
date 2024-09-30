@@ -7,7 +7,7 @@ use LWP::UserAgent;
 use JSON;
 
 my $request = LWP::UserAgent->new()->get(
-        "http://localhost:8000/v1/address/tb1qlw09ycnp3qgqw9alqgx93ed7cg5kmnyud326ky"
+        "https://api-testnet.bitcoin-balance-api.com/v1/address/tb1qlw09ycnp3qgqw9alqgx93ed7cg5kmnyud326ky"
 );
 my $response = decode_json($request->content);
 print "Bitcoin Balance: $response->{'balance'}";
